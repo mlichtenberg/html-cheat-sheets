@@ -1,0 +1,209 @@
+<html>
+<head>
+	<style>
+		body {
+			width:75%;
+			margin:auto;
+			background-color:#A0A0A0;
+		}
+		main {
+			background-color:#FFFFFF;
+		}
+		header {
+			background-color:#E0E0E0;
+			padding:10px;
+		}
+		article {
+			padding:10px;
+		}
+		aside {
+			background-color:#D0D0D0;
+			margin:5px;
+			padding:5px;
+			float:right;
+		}
+		form {
+			border-width: 1px;
+			border-color: gray;
+			border-style: solid;
+			margin:10px;
+		}
+		footer {
+			background-color:#E0E0E0;
+			padding:10px;
+		}
+		h1, h3 {
+			font-size:9px;
+			color:blue;
+		}
+		h2 {
+			font-size:16px;
+		}
+		.oddArticle {
+			background-color:#FFFFFF;
+		}
+		.evenArticle {
+			background-color:#F0F0F0;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<!-- page header -->
+		<header>
+			<h1>&lt;HEADER&gt;</h1>
+		</header>
+		<!-- side element -->
+		<aside>
+			<h1>&lt;ASIDE&gt;</h1>
+			<p>
+				Sidebar information goes here.
+			</p>
+			<p>
+				It can be whatever.  Maybe a list?
+				<ul>
+					<li>List item 1
+					<li>List item 2
+				</ul>
+			</p>
+		</aside>
+		<!-- main page content (article element can be repeated -->
+		<article class="oddArticle">
+			<h1>&lt;ARTICLE&gt;</h1>
+			<p>
+				Using &lt;header&gt;, &lt;footer&gt;, &lt;article&gt; and &lt;aside&gt; elements allows search engines to more 
+				easily identify the parts of the page, including the information that is most relevant for searching.
+			</p>
+		</article>
+		<article class="evenArticle">
+			<h1>&lt;ARTICLE&gt;</h1>
+			<h2>&quot;AUTOFOCUS&quot; ATTRIBUTE EXAMPLE</h2>
+			<p>
+				&lt;input type=&quot;text&quot; autofocus&gt; <input type="text" autofocus />
+			</p>
+			<p>
+				This element receives focus when page loads 
+			</p>
+		</article>
+		<form>
+			<article class="oddArticle">
+				<h1>&lt;ARTICLE&gt;</h1>
+				<h2>FORM VALIDATION EXAMPLES</h2>
+				<p>
+					&lt;input type=&quot;text&quot; pattern=&quot;[a-zA-Z]+&quot;&gt; <input type="text" pattern="[a-zA-Z]+" placeholder="only letters allowed" />
+					<input type="button" onclick="alert(document.querySelector('input[pattern]').checkValidity());" value="Is Valid?" />
+				</p>
+				<p>
+					&lt;input type=&quot;text&quot; required&gt; <input type="text" required placeholder="value is required" />
+					<input type="button" onclick="alert(document.querySelector('input[required]').checkValidity());" value="Is Valid?" />
+				</p>
+				<p>
+					&lt;input type=&quot;number&quot; min=&quot;1&quot; max=&quot;10&quot;&gt; <input type="number" min="1" max="10" />
+					<input type="button" onclick="alert(document.querySelector('input[type=number]').checkValidity());" value="Is Valid?" />
+				</p>
+				<p>
+					&lt;input type=&quot;email&quot;&gt; <input type="email" placeholder="email address" />
+					<input type="button" onclick="alert(document.querySelector('input[type=email]').checkValidity());" value="Is Valid?" />
+				</p>
+				<input type="submit" value="Submit Form" />
+			</article>
+		</form>
+		<article class="evenArticle">
+			<h1>&lt;ARTICLE&gt;</h1>
+			<h2>&lt;DETAILS&gt;-&lt;SUMMARY&gt; EXAMPLE</h2>
+			<p>
+				<details>
+					<summary>The &lt;summary&gt; element provides a heading for an expandable &lt;details&gt; element</summary>
+						The &lt;details&gt; element contents show up here
+					</summary>
+				</details>
+			</p>
+			<p>
+				<details open>
+					<summary>This is a &lt;details&gt; element that is open by default (&lt;details open&gt;)</summary>
+					<ul>
+						<li>&lt;details&gt; content</li>
+						<li>&lt;details&gt; content</li>
+					</ul>
+				</details>
+			</p>
+		</article>
+		<article class="oddArticle">
+			<h1>&lt;ARTICLE&gt;</h1>
+			<h2>&lt;DATALIST&gt; EXAMPLE</h2>
+			<p>
+				<label for="colorList">Choose a color (&lt;input&gt; with &lt;datalist&gt;)</label>
+				<input id="colorList" list="colors" type="text" />
+				<datalist id="colors">
+					<option value="black"/>
+					<option value="blue"/>
+					<option value="pink"/>
+					<option value="purple"/>
+					<option value="red"/>
+				</datalist>
+			</p>
+		</article>
+		<article class="evenArticle">
+			<h1>&lt;ARTICLE&gt;</h1>
+			<h2>RANGE, &lt;PROGRESS&gt;, AND &lt;METER&gt; EXAMPLES</h2>
+			<p>&lt;input type=&quotrange&quot&gt; element: <input type="range" min="0" max="100" step="10" value="40"></p>
+			<p>&lt;progress&gt; element: <progress max="100" value="25"></progress></p>
+			<p>&lt;meter&gt; element: <meter min="0" max="100" value="75">75 out of 100</meter></p>
+		</article>
+		<article class="oddArticle">
+			<h1>&lt;ARTICLE&gt;</h1>
+			<h2>&lt;MARK&gt; EXAMPLE</h2>
+			<p>This <mark>highlighted</mark> text uses the &lt;mark&gt; element.</p>
+		</article>
+		<article class="evenArticle">
+			<h1>&lt;ARTICLE&gt;</h1>
+			<h2>DATE/TIME &lt;INPUT&gt; EXAMPLES</h2>
+			<p>&lt;input type=&quot;date&quot;&gt; <input type="date" /></p>
+			<p>&lt;input type=&quot;datetime-local&quot;&gt; <input type="datetime-local" /></p>
+			<p>&lt;input type=&quot;time&quot;&gt; <input type="time" /></p>
+		</article>
+		<article class="oddArticle">
+			<h1>&lt;ARTICLE&gt;</h1>
+			<h2>SEARCH &lt;INPUT&gt; EXAMPLE</h2>
+			<p>&lt;input type=&quot;search&quot;&gt; Displays an 'x' for clearing input <input type="search" /></p>
+		</article>
+		<article class="evenArticle">
+			<h1>&lt;ARTICLE&gt;</h1>
+			<h2>&quot;PLACEHOLDER&quot; &lt;INPUT&gt; ATTRIBUTE EXAMPLE</h2>
+			<p>&lt;input type=&quot;search&quot; placeholder=&quot;placeholder text&quot;&gt; <input type="search" placeholder="placeholder text" /></p>
+		</article>
+		<article class="oddArticle">
+			<h1>&lt;ARTICLE&gt;</h1>
+			<h2>&lt;VIDEO&gt; AND &lt;AUDIO&gt; EXAMPLES</h2>
+			<section>
+				<h3>&lt;SECTION&gt;</h3>
+				<p>
+					&lt;video&gt;
+				</p>
+				<p>
+					<video width="480" controls>
+						<source src="sample.mp4">
+						This browser does not support native video.
+					</video>
+				</p>
+			</section>
+			<section>
+				<h3>&lt;SECTION&gt;</h3>
+				<p>
+					&lt;audio&gt;
+				</p>
+				<p>
+					<audio controls>
+						<source src="owl.mp3">
+						This browser does not support native audio.
+					</audio>
+				</p>
+			</section>
+		</article>
+		<!-- page footer -->
+		<footer>
+			<h1>&lt;FOOTER&gt;</h1>
+		</footer>
+	</main>
+</body>
+</html>
